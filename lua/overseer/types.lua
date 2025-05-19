@@ -18,6 +18,7 @@
 ---@field template_timeout? integer For template providers, how long to wait (in ms) before timing out. Set to 0 to disable timeouts.
 ---@field template_cache_threshold? integer Cache template provider results if the provider takes longer than this to run. Time is in ms. Set to 0 to disable caching.
 ---@field log? table[]
+---@field lazy? boolean? (default: true) Lazy load overseer
 
 ---@class (exact) overseer.ConfigTaskList
 ---@field default_detail? 1|2|3 Default detail level for tasks. Can be 1-3.
