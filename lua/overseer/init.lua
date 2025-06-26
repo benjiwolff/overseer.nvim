@@ -304,10 +304,11 @@ M.setup = function(opts)
     return
   end
   opts = opts or {}
+  opts.lazy = opts.lazy == nil and true or opts.lazy
   create_commands()
   M.enable_dap(opts.dap)
   pending_opts = opts
-  if initialized then
+  if initialized or not opts.lazy then
     do_setup()
   end
 end
